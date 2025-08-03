@@ -1,54 +1,68 @@
-📦 Express User API
-This is a simple Node.js and Express-based RESTful API for managing users. It connects to a MongoDB database and supports common user operations like creating, retrieving, and updating user data. The project demonstrates basic routing, controller separation, and MongoDB integration using Mongoose.
+# 📦 Express User API
 
-🔧 Features
-✅ RESTful API built with Express
+A simple and modular **Node.js** + **Express** RESTful API for managing user data. It connects to a **MongoDB** database using **Mongoose**, and supports basic user operations such as creating, reading, and updating user records.
 
-✅ Connected to MongoDB using Mongoose
+This project demonstrates good development practices like route separation, controller logic, and database abstraction — making it easy to extend and maintain.
 
-✅ Modular structure using routes, controllers, and models
+---
 
-✅ Middleware support for express.json() and URL encoding
+## 🔧 Features
 
-✅ Organized and ready for extension (e.g., auth, validation)
+- ✅ RESTful API built with **Express**
+- ✅ MongoDB integration using **Mongoose**
+- ✅ Clean, modular architecture:
+  - `routes/`, `controllers/`, `models/`
+- ✅ Middleware for `express.json()` and URL-encoded data
+- ✅ Ready to extend with features like **authentication**, **validation**, etc.
 
-📁 Project Structure
-pgsql
-Copy
-Edit
-.
-├── connection.js         # MongoDB connection setup
-├── controllers/          # Controller logic for handling user routes
-├── index.js              # Entry point of the server
-├── models/               # Mongoose schema definitions
-├── routes/               # Express route definitions
-├── views/                # (Optional) Views or templates
+---
+
+## 📁 Project Structure
+
+express-user-api/
+
+├── connection.js # MongoDB connection setup
+
+├── controllers/ # Business logic for user operations
+
+├── index.js # Entry point of the application
+
+├── models/ # Mongoose schemas for MongoDB collections
+
+├── routes/ # Route definitions for Express
+
+├── views/ # (Optional) Templates or static views
+
 ├── .gitignore
+
 ├── package.json
-🚀 Getting Started
-1. Clone the repo
+
+## 🚀 Getting Started:
+1. Clone the Repository
 bash
 Copy
 Edit
 git clone https://github.com/Avinash-maurya-07/express-user-api.git
 cd express-user-api
-2. Install dependencies
+2. Install Dependencies
 bash
 Copy
 Edit
 npm install
-3. Start the server
+3. Start the Server
 bash
 Copy
 Edit
 node index.js
-Server will run at: http://localhost:3000
+Server will start at: http://localhost:3000
 
-🛠 Example Routes
-GET /users – Get all users
+## 🛠 API Endpoints
+Method	Route	Description
 
-POST /users – Add a new user
+GET	/users	Get all users
 
-GET /users/:id – Get a user by ID
+POST	/users	Create a new user
 
-PUT /users/:id – Update a user
+GET	/users/:id	Get user by ID
+
+PUT	/users/:id	Update user by ID
